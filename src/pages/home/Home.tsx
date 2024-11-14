@@ -49,7 +49,11 @@ export default function Home() {
   };
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <p>Loading...</p>;
+      </div>
+    );
   }
 
   if (isError) {
