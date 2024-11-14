@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Movie Platform Implementation (Moviedb)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+Moviedb is a simple dashboard to show current trending movies and tv shows.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Show Now Playing Movies**: These are movies that are currently playing on cinemas and other movie platform.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Popular Movies**: Shows popular movies.
 
-- Configure the top-level `parserOptions` property like this:
+- **Trending TV Shows**: Shows trending TV Shows.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Libraries used
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React - Vite
+- @react-oauth/google - Used for google authentication (Sign in with google)
+- @tanstack/react-query - For data fetching (Makes background data fetching easy)
+- axios - For making http request from the browser
+- formik - Used in handling forms (input, validation and error messages)
+- wt-decode - Used to decode the credentialResponse from google oauth into meaningfull text
+- lucide-react - library for icons
+- swiper - Slider images and corousel
+- yup - Used to validate data to make sure it matches the schema you provided
+- tailwindcss - CSS libarry for creating user interface
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Pending Issues
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Some pages are not well responsive
+- Data Visualizations(Charts)

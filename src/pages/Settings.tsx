@@ -27,6 +27,22 @@ export default function Settings() {
         <h1 className="text-3xl font-bold mb-4 text-center mt-5">Settings</h1>
         <div className="mb-3">
           <Input
+            name="firstname"
+            label="First Name"
+            type="text"
+            placeholder="Enter your firtsname"
+          />
+        </div>
+        <div className="mb-3">
+          <Input
+            name="lastname"
+            label="Last Name"
+            type="text"
+            placeholder="Enter your lastname"
+          />
+        </div>
+        <div className="mb-3">
+          <Input
             name="email"
             label="Email"
             type="email"
